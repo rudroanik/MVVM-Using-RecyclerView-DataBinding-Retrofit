@@ -18,7 +18,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
 
-        postRepository = new PostRepository();
+        postRepository = new PostRepository(application);
     }
 
     public MutableLiveData<List<Post>> getAllPostFromDB(){
